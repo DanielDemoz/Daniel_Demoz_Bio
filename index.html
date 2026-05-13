@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daniel S. Demoz — practical AI and analytics leadership, governance, and teaching. Toronto-based advisor helping organizations align evidence, readiness, and measurable outcomes.">
+    <meta name="description" content="Daniel S. Demoz: professor of business analytics and AI &amp; data strategy advisor, Toronto. Executive profile: teaching, advisory, and evidence-led analytics.">
     <meta name="keywords" content="Daniel Demoz, Daniel S. Demoz, AI readiness, analytics strategy, AI governance, business analytics professor, Toronto consultant, evidence-based AI, BRUKD">
     <meta name="author" content="Daniel S. Demoz">
     <meta property="og:title" content="Daniel Demoz | AI & analytics leadership">
@@ -52,10 +52,69 @@
             scroll-behavior: smooth;
             background: var(--bg);
             color: var(--text);
+            line-height: 1.65;
+        }
+
+        main {
+            display: block;
         }
 
         section[id] {
             scroll-margin-top: 5.5rem;
+        }
+
+        .section-wrap {
+            max-width: 72rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 640px) {
+            .section-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+        }
+        @media (min-width: 1024px) {
+            .section-wrap { padding-left: 2rem; padding-right: 2rem; }
+        }
+
+        .section-pad {
+            padding-top: 4.5rem;
+            padding-bottom: 4.5rem;
+        }
+        @media (min-width: 768px) {
+            .section-pad {
+                padding-top: 6.5rem;
+                padding-bottom: 6.5rem;
+            }
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 0;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 1.5rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid var(--border);
+        }
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -5px;
+            top: 0.35rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
         }
 
         h1, h2, h3, .font-display {
@@ -177,8 +236,8 @@
         }
         
         .card-modern:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(31, 41, 51, 0.08);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(31, 41, 51, 0.07);
             border-color: var(--border);
         }
         
@@ -268,70 +327,72 @@
         
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased text-[#1F2933]">
+    <a href="#main-content" class="absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0 focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:w-auto focus:h-auto focus:m-0 focus:p-3 focus:overflow-visible focus:whitespace-normal focus:bg-white focus:border focus:border-[#D8D5CF] focus:rounded-md focus:text-sm focus:font-semibold focus:text-[#1F2933]">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="nav-modern fixed w-full z-50 top-0">
+    <nav class="nav-modern fixed w-full z-50 top-0" aria-label="Primary">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-14 md:h-16 items-center">
                 <div class="flex items-center gap-3">
                     <a href="#" class="text-lg font-semibold text-[#1F2933] font-display tracking-tight">Daniel Demoz</a>
-                    <span class="hidden sm:inline text-xs text-[#52606D] uppercase tracking-wider">Toronto</span>
                 </div>
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium text-[#52606D]">
-                    <a href="#about" class="hover:text-[#C46A2D] transition-colors">Bio</a>
+                <div class="hidden md:flex items-center gap-7 text-sm font-medium text-[#52606D]">
+                    <a href="#about" class="hover:text-[#C46A2D] transition-colors">About</a>
+                    <a href="#areas" class="hover:text-[#C46A2D] transition-colors">Areas</a>
                     <a href="#impact" class="hover:text-[#C46A2D] transition-colors">Impact</a>
-                    <a href="#focus" class="hover:text-[#C46A2D] transition-colors">Focus</a>
                     <a href="#experience" class="hover:text-[#C46A2D] transition-colors">Experience</a>
-                    <a href="#insights" class="hover:text-[#C46A2D] transition-colors">Insights</a>
                     <a href="#projects" class="hover:text-[#C46A2D] transition-colors">Projects</a>
+                    <a href="#insights" class="hover:text-[#C46A2D] transition-colors">Writing</a>
                     <a href="#education" class="hover:text-[#C46A2D] transition-colors">Education</a>
                     <a href="#contact" class="btn-primary text-white px-5 py-2 rounded-md text-sm font-semibold">Contact</a>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button type="button" id="menu-btn" class="text-[#1F2933] p-2" aria-label="Open menu">
-                        <i data-feather="menu"></i>
+                    <button type="button" id="menu-btn" class="text-[#1F2933] p-2 rounded-md border border-transparent hover:border-[#D8D5CF]" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                        <i data-feather="menu" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden border-t border-[#D8D5CF] bg-[#F5F5F2] px-4 py-4 space-y-1">
-            <a href="#about" class="block py-2 text-[#1F2933]">Bio</a>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-[#D8D5CF] bg-[#F5F5F2] px-4 py-4 space-y-1" role="dialog" aria-label="Mobile navigation">
+            <a href="#about" class="block py-2 text-[#1F2933]">About</a>
+            <a href="#areas" class="block py-2 text-[#1F2933]">Areas of work</a>
             <a href="#impact" class="block py-2 text-[#1F2933]">Impact</a>
-            <a href="#focus" class="block py-2 text-[#1F2933]">Focus</a>
             <a href="#experience" class="block py-2 text-[#1F2933]">Experience</a>
-            <a href="#insights" class="block py-2 text-[#1F2933]">Insights</a>
             <a href="#projects" class="block py-2 text-[#1F2933]">Projects</a>
+            <a href="#insights" class="block py-2 text-[#1F2933]">Writing</a>
             <a href="#education" class="block py-2 text-[#1F2933]">Education</a>
             <a href="#contact" class="block btn-primary text-white px-4 py-3 rounded-md text-center font-semibold mt-2">Contact</a>
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- Hero -->
-    <header class="pt-28 md:pt-32 pb-16 md:pb-24 bg-[#F5F5F2] border-b border-[#D8D5CF]">
+    <header class="pt-24 md:pt-28 pb-14 md:pb-20 bg-[#F5F5F2] border-b border-[#D8D5CF]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
-                <div class="md:col-span-7" data-aos="fade-up" data-aos-duration="600">
-                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-4">Professor · Advisor · Toronto</p>
-                    <h1 class="text-4xl sm:text-5xl md:text-[2.75rem] font-semibold text-[#1F2933] leading-[1.12] mb-6 font-display">
+            <div class="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
+                <div class="md:col-span-7" data-aos="fade-up" data-aos-duration="550">
+                    <h1 class="text-4xl sm:text-5xl md:text-[2.625rem] font-semibold text-[#1F2933] leading-[1.1] mb-4 font-display tracking-tight">
                         Daniel S. Demoz
                     </h1>
+                    <p class="text-base sm:text-lg text-[#52606D] font-medium leading-snug mb-1">Professor of Business Analytics</p>
+                    <p class="text-base sm:text-lg text-[#52606D] font-medium leading-snug mb-1">AI &amp; Data Strategy Advisor</p>
+                    <p class="text-sm text-[#52606D] uppercase tracking-wider mb-8">Toronto, Canada</p>
                     <p class="text-lg md:text-xl text-[#1F2933] font-medium leading-relaxed mb-5 max-w-xl">
-                        Practical AI and analytics leadership for organizations that need clarity, sound governance, and measurable outcomes.
+                        Practical AI and analytics leadership for organizations that need clarity, governance, and measurable outcomes.
                     </p>
-                    <p class="text-base text-[#52606D] leading-relaxed max-w-xl mb-2">
-                        I work at the intersection of teaching, consulting, and delivery. Most engagements start the same way: align on decisions the business actually makes, then build analytics and controls that support those decisions.
+                    <p class="text-base text-[#52606D] leading-relaxed max-w-xl mb-10">
+                        I split time between the classroom and client work, helping leaders decide what to measure, what to pilot, and what to own before tools scale.
                     </p>
-                    <p class="text-sm text-[#52606D] mb-10">Evidence-based AI, readiness before pilots, and analytics tied to operations. SMB and institutional contexts.</p>
                     <div class="flex flex-wrap gap-3">
-                        <a href="#contact" class="btn-primary text-white px-6 py-3 rounded-md font-semibold text-sm">Start a conversation</a>
-                        <a href="#insights" class="btn-outline px-6 py-3 rounded-md font-semibold text-sm">Read insights</a>
+                        <a href="#contact" class="btn-primary text-white px-6 py-3 rounded-md font-semibold text-sm">Get in touch</a>
+                        <a href="#projects" class="btn-outline px-6 py-3 rounded-md font-semibold text-sm">View featured work</a>
                     </div>
                 </div>
-                <div class="md:col-span-5 flex justify-center md:justify-end" data-aos="fade-up" data-aos-delay="80" data-aos-duration="600">
-                    <div class="relative w-[260px] sm:w-[280px]">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#1F2933]/25 to-transparent rounded-lg pointer-events-none z-10"></div>
-                        <div class="rounded-lg overflow-hidden border border-[#D8D5CF] shadow-[0_20px_50px_-20px_rgba(31,41,51,0.25)] bg-[#ECEAE4]">
-                            <img src="DanD2.jpg" alt="Daniel S. Demoz" width="280" height="360" class="w-full h-[340px] md:h-[380px] object-cover object-center grayscale-[35%] contrast-[1.02]">
+                <div class="md:col-span-5 flex justify-center md:justify-end" data-aos="fade-up" data-aos-delay="60" data-aos-duration="550">
+                    <div class="relative w-[240px] sm:w-[260px] md:w-[280px]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1F2933]/20 to-transparent rounded-lg pointer-events-none z-10" aria-hidden="true"></div>
+                        <div class="rounded-lg overflow-hidden border border-[#D8D5CF] shadow-[0_16px_40px_-16px_rgba(31,41,51,0.22)] bg-[#ECEAE4]">
+                            <img src="DanD2.jpg" alt="Portrait of Daniel S. Demoz" width="280" height="360" class="w-full h-[300px] md:h-[360px] object-cover object-center grayscale-[30%] contrast-[1.02]">
                         </div>
                     </div>
                 </div>
@@ -339,375 +400,315 @@
         </div>
     </header>
 
-    <!-- Credibility strip -->
-    <section id="credibility" class="py-6 bg-[#ECEAE4] border-b border-[#D8D5CF]" aria-label="Credibility highlights">
+    <!-- Credibility snapshot -->
+    <section id="credibility" class="py-8 md:py-10 bg-[#ECEAE4] border-b border-[#D8D5CF]" aria-label="Credibility snapshot">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-10 gap-y-4 text-center md:text-left text-sm text-[#52606D]">
-                <div><span class="font-semibold text-[#1F2933] font-display">Ontario colleges</span><br><span class="text-xs">George Brown, Seneca, Centennial, Computek</span></div>
-                <div><span class="font-semibold text-[#1F2933] font-display">BRUKD Consultancy</span><br><span class="text-xs">Independent practice · advisory</span></div>
-                <div><span class="font-semibold text-[#1F2933] font-display">Cloud &amp; data</span><br><span class="text-xs">AWS · Azure · GCP context</span></div>
+            <div class="flex flex-wrap justify-center md:justify-between items-start gap-x-10 gap-y-5 text-center md:text-left text-sm text-[#52606D]">
+                <div><span class="font-semibold text-[#1F2933] font-display">Ontario colleges</span><br><span class="text-xs leading-relaxed">George Brown · Seneca · Centennial · Computek</span></div>
+                <div><span class="font-semibold text-[#1F2933] font-display">BRUKD Consultancy</span><br><span class="text-xs">Independent advisory practice</span></div>
+                <div><span class="font-semibold text-[#1F2933] font-display">Cloud context</span><br><span class="text-xs">AWS · Azure · GCP</span></div>
                 <div><span class="font-semibold text-[#1F2933] font-display">Regions</span><br><span class="text-xs">Canada · Southeast Asia · East Africa</span></div>
+                <div><span class="font-semibold text-[#1F2933] font-display">Scope</span><br><span class="text-xs">18+ years across teaching, delivery, and consulting</span></div>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="py-20 md:py-28 bg-[#F5F5F2] border-b border-[#D8D5CF]">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="600">
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-4 text-center">Bio</p>
-            <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] mb-10 font-display text-center">How I work with organizations</h2>
-            <div class="text-[#52606D] leading-relaxed text-base space-y-5">
-                <p>Most of my career sits across three places: the classroom, client organizations, and my independent practice, <a href="https://brukdconsultancy.com/" class="text-[#1F2933] font-semibold underline decoration-[#D8D5CF] underline-offset-2 hover:text-[#C46A2D]" target="_blank" rel="noopener noreferrer">BRUKD Consultancy</a>. That mix keeps a useful tension: academic rigor on one side, and delivery constraints on the other.</p>
-                <p>Teaching graduate analytics keeps me close to tools, assignments, and the gap between theory and how work actually gets done. Client work keeps me close to budgets, vendors, and leaders who need plain language. The thread I protect is the handoff from analysis to action: KPIs people believe, data quality you can defend, and pilots small enough to learn from without betting the brand.</p>
-                <p>When teams talk about AI, I start with readiness and ownership. Models are easy compared with getting agreement on what &ldquo;good&rdquo; looks like and who is accountable when the output is wrong.</p>
-                <p>SMBs and institutions differ in scale, not in the questions that matter: who signs off, what you will measure in the first ninety days, and what you stop if drift or misuse shows up. Evidence is the stack of baselines and review points that let you defend a decision months later.</p>
+    <section id="about" class="section-pad bg-[#F5F5F2] border-b border-[#D8D5CF]">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left" data-aos="fade-up" data-aos-duration="550">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3 text-center md:text-left">Overview</p>
+            <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] mb-8 font-display text-center md:text-left">About</h2>
+            <div class="text-[#52606D] leading-relaxed text-base space-y-5 text-left">
+                <p>Daniel S. Demoz is a professor of business analytics in Ontario and an independent advisor through <a href="https://brukdconsultancy.com/" class="text-[#1F2933] font-semibold underline decoration-[#D8D5CF] underline-offset-2 hover:text-[#C46A2D]" target="_blank" rel="noopener noreferrer">BRUKD Consultancy</a>. He teaches graduate analytics, leads advisory work with SMBs and institutions, and stays close to delivery, not slideware.</p>
+                <p>His work connects models to decisions: clear KPIs, defensible data, and review points that match how organizations actually operate. AI enters the conversation when the business can say what &ldquo;good&rdquo; means and who answers for outcomes.</p>
+                <p>Open to teaching roles, board-level analytics conversations, scoped advisory, and select build work with teams that value plain language and discipline over hype.</p>
             </div>
-            <blockquote class="mt-12 border-l-2 border-[#C46A2D] pl-6 text-[#1F2933] text-lg leading-relaxed bio-prose" style="font-style: italic;">
-                Strong data and AI work should sharpen judgment, not replace it.
-            </blockquote>
-            <div class="mt-10 flex flex-wrap justify-center gap-3">
-                <a href="#contact" class="btn-primary text-white px-6 py-3 rounded-md font-semibold text-sm inline-flex items-center gap-2">Get in touch <i data-feather="arrow-right" class="w-4 h-4"></i></a>
-                <a href="https://www.linkedin.com/in/daniel-s-demoz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-md font-semibold text-sm border border-[#D8D5CF] bg-white text-[#1F2933] hover:border-[#C46A2D] transition-colors"><i data-feather="linkedin" class="w-4 h-4"></i> LinkedIn</a>
-                <a href="#experience" class="inline-flex items-center gap-2 px-6 py-3 rounded-md font-semibold text-sm border border-[#D8D5CF] bg-transparent text-[#1F2933] hover:bg-white transition-colors"><i data-feather="briefcase" class="w-4 h-4"></i> Experience</a>
-            </div>
+            <p class="mt-10">
+                <a href="https://www.linkedin.com/in/daniel-s-demoz" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] hover:underline">LinkedIn profile</a>
+            </p>
         </div>
     </section>
 
-    <!-- Impact -->
-    <section id="impact" class="py-20 md:py-24 bg-white border-b border-[#D8D5CF]">
+    <!-- Areas of work -->
+    <section id="areas" class="section-pad bg-white border-b border-[#D8D5CF]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl mb-14" data-aos="fade-up" data-aos-duration="600">
-                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3">Impact</p>
-                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Selected outcomes</h2>
-                <p class="text-[#52606D] leading-relaxed">Representative engagements. Each number came with trade-offs, baselines, and follow-up work that mattered as much as the headline.</p>
+            <div class="max-w-2xl mb-12 md:mb-14" data-aos="fade-up" data-aos-duration="550">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3">Areas of work</p>
+                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Where I spend attention</h2>
+                <p class="text-[#52606D] leading-relaxed">Five clusters cover most engagements. Tools sit underneath the work. They change; the questions do not.</p>
             </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="rounded-lg border border-[#D8D5CF] bg-[#F5F5F2] p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-duration="600">
-                    <p class="text-3xl font-semibold text-[#1F2933] font-display mb-2">18+</p>
-                    <p class="text-sm font-semibold text-[#1F2933] mb-2">Years across delivery</p>
-                    <p class="text-sm text-[#52606D] leading-relaxed">Leadership, teaching, consulting, and public-sector program roles in sequence, not in parallel the whole time.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="card-modern rounded-lg p-6 md:p-7 bg-[#F5F5F2]" data-aos="fade-up" data-aos-duration="550">
+                    <h3 class="font-semibold text-[#1F2933] font-display mb-2">AI &amp; analytics strategy</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed">Roadmaps, use-case selection, and sequencing that match budgets and maintenance capacity. Python and notebooks when prototyping helps.</p>
                 </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-[#F5F5F2] p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="50" data-aos-duration="600">
-                    <p class="text-3xl font-semibold text-[#1F2933] font-display mb-2">~28%</p>
-                    <p class="text-sm font-semibold text-[#1F2933] mb-2">Operational efficiency</p>
-                    <p class="text-sm text-[#52606D] leading-relaxed">Workflow redesign, automation, and KPI alignment so teams spent less time reconciling and more time deciding.</p>
+                <div class="card-modern rounded-lg p-6 md:p-7 bg-[#F5F5F2]" data-aos="fade-up" data-aos-delay="40" data-aos-duration="550">
+                    <h3 class="font-semibold text-[#1F2933] font-display mb-2">Data governance &amp; KPI design</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed">Definitions, ownership, and lineage so metrics survive a finance or audit conversation. SQL and documentation discipline first.</p>
                 </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-[#F5F5F2] p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
-                    <p class="text-3xl font-semibold text-[#1F2933] font-display mb-2">~30%</p>
-                    <p class="text-sm font-semibold text-[#1F2933] mb-2">Churn reduction</p>
-                    <p class="text-sm text-[#52606D] leading-relaxed">Predictive support paired with retention plays; model accuracy was only one input to the business decision.</p>
+                <div class="card-modern rounded-lg p-6 md:p-7 bg-[#F5F5F2]" data-aos="fade-up" data-aos-delay="80" data-aos-duration="550">
+                    <h3 class="font-semibold text-[#1F2933] font-display mb-2">Business intelligence &amp; reporting</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed">Executive-ready views in Power BI and Tableau, with attention to refresh reliability and narrative, not chart volume.</p>
                 </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-[#F5F5F2] p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="150" data-aos-duration="600">
-                    <p class="text-3xl font-semibold text-[#1F2933] font-display mb-2">4.5×</p>
-                    <p class="text-sm font-semibold text-[#1F2933] mb-2">Marketing ROI</p>
-                    <p class="text-sm text-[#52606D] leading-relaxed">Reporting and measurement reframed so spend and pipeline could be discussed in one coherent story.</p>
+                <div class="card-modern rounded-lg p-6 md:p-7 bg-[#F5F5F2]" data-aos="fade-up" data-aos-delay="120" data-aos-duration="550">
+                    <h3 class="font-semibold text-[#1F2933] font-display mb-2">Machine learning &amp; predictive modeling</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed">Churn, delay risk, and similar problems where the handoff to operations is designed up front, not after the model is trained.</p>
+                </div>
+                <div class="card-modern rounded-lg p-6 md:p-7 bg-[#F5F5F2] sm:col-span-2 lg:col-span-2" data-aos="fade-up" data-aos-delay="160" data-aos-duration="550">
+                    <h3 class="font-semibold text-[#1F2933] font-display mb-2">Teaching, research &amp; executive training</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed">Graduate analytics at Ontario colleges, workshops for leaders, and writing that translates methods into language non-specialists can use. SAS where programs still require it.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- What I work on -->
-    <section id="focus" class="py-20 md:py-28 bg-[#F5F5F2] border-t border-[#D8D5CF]">
+    <!-- Selected impact -->
+    <section id="impact" class="section-pad bg-[#F5F5F2] border-b border-[#D8D5CF]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl mb-14" data-aos="fade-up" data-aos-duration="600">
-                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3">Focus</p>
-                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">What I work on</h2>
-                <p class="text-[#52606D] leading-relaxed">Engagements are usually a blend of teaching, advisory, and hands-on delivery. These are the buckets that show up most often.</p>
+            <div class="max-w-2xl mb-12 md:mb-14" data-aos="fade-up" data-aos-duration="550">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3">Selected impact</p>
+                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Outcomes in context</h2>
+                <p class="text-[#52606D] leading-relaxed">Illustrative results from past programs. Each depended on baseline data, trade-offs, and follow-through, not the headline alone.</p>
             </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-duration="600">
-                    <i data-feather="shield" class="w-5 h-5 text-[#C46A2D] mb-3"></i>
-                    <h3 class="font-semibold text-[#1F2933] font-display mb-2">AI readiness &amp; controls</h3>
-                    <p class="text-sm text-[#52606D] leading-relaxed">Data inventory, roles, and decision rights before models. Practical checks so pilots do not outrun accountability.</p>
-                </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="40" data-aos-duration="600">
-                    <i data-feather="compass" class="w-5 h-5 text-[#C46A2D] mb-3"></i>
-                    <h3 class="font-semibold text-[#1F2933] font-display mb-2">Analytics strategy</h3>
-                    <p class="text-sm text-[#52606D] leading-relaxed">Roadmaps that match how budgets and teams actually operate. Fewer initiatives, clearer sequencing, honest trade-offs.</p>
-                </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="80" data-aos-duration="600">
-                    <i data-feather="layers" class="w-5 h-5 text-[#C46A2D] mb-3"></i>
-                    <h3 class="font-semibold text-[#1F2933] font-display mb-2">Data &amp; KPI architecture</h3>
-                    <p class="text-sm text-[#52606D] leading-relaxed">Definitions, lineage, and reporting that leadership can defend in a board conversation, not only in a notebook.</p>
-                </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="120" data-aos-duration="600">
-                    <i data-feather="cpu" class="w-5 h-5 text-[#C46A2D] mb-3"></i>
-                    <h3 class="font-semibold text-[#1F2933] font-display mb-2">Grounded AI adoption</h3>
-                    <p class="text-sm text-[#52606D] leading-relaxed">Use cases tied to existing metrics, documentation that teams will use, and review loops that match real risk.</p>
-                </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="160" data-aos-duration="600">
-                    <i data-feather="book-open" class="w-5 h-5 text-[#C46A2D] mb-3"></i>
-                    <h3 class="font-semibold text-[#1F2933] font-display mb-2">Executive analytics education</h3>
-                    <p class="text-sm text-[#52606D] leading-relaxed">Translating methods into language finance, operations, and IT can share. Workshop and classroom formats.</p>
-                </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
-                    <i data-feather="briefcase" class="w-5 h-5 text-[#C46A2D] mb-3"></i>
-                    <h3 class="font-semibold text-[#1F2933] font-display mb-2">SMB digital advisory</h3>
-                    <p class="text-sm text-[#52606D] leading-relaxed">Practical automation, integration, and analytics for resource-constrained teams. Vendor-neutral where possible.</p>
-                </div>
-            </div>
-            <div class="mt-14 rounded-lg border border-[#D8D5CF] bg-[#ECEAE4]/60 p-6 md:p-8" data-aos="fade-up" data-aos-duration="600">
-                <h3 class="text-sm font-semibold uppercase tracking-wider text-[#52606D] mb-3">Technical toolkit (summary)</h3>
-                <p class="text-sm text-[#52606D] leading-relaxed">Python and common ML libraries; SQL and relational design; Power BI and Tableau; SAS where programs still depend on it; Spark and cloud exposure across AWS, Azure, and GCP; optimization and time-series work when the problem calls for it. Depth varies by engagement; the default is to match tool choice to maturity and maintenance capacity.</p>
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <article class="card-modern rounded-lg p-6 md:p-8 bg-white" data-aos="fade-up" data-aos-duration="550">
+                    <p class="text-2xl font-semibold text-[#C46A2D] font-display mb-3">~28%</p>
+                    <h3 class="text-sm font-semibold text-[#1F2933] mb-3 leading-snug">Workflow automation and KPI alignment</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed">Contributing to about a 28% efficiency improvement where teams spent less time reconciling and more time on decisions that moved work forward.</p>
+                </article>
+                <article class="card-modern rounded-lg p-6 md:p-8 bg-white" data-aos="fade-up" data-aos-delay="40" data-aos-duration="550">
+                    <p class="text-2xl font-semibold text-[#C46A2D] font-display mb-3">~30%</p>
+                    <h3 class="text-sm font-semibold text-[#1F2933] mb-3 leading-snug">Predictive analytics support</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed">Linked to roughly a 30% churn reduction where retention plays and service design (not the model score alone) closed the loop.</p>
+                </article>
+                <article class="card-modern rounded-lg p-6 md:p-8 bg-white" data-aos="fade-up" data-aos-delay="80" data-aos-duration="550">
+                    <p class="text-2xl font-semibold text-[#C46A2D] font-display mb-3">4.5×</p>
+                    <h3 class="text-sm font-semibold text-[#1F2933] mb-3 leading-snug">Marketing reporting redesign</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed">Contributing to a 4.5× return on marketing spend when spend and pipeline could finally be discussed in one coherent story.</p>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 md:py-28 bg-[#ECEAE4] border-t border-[#D8D5CF]">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-14" data-aos="fade-up" data-aos-duration="600">
+    <section id="experience" class="section-pad bg-[#ECEAE4] border-t border-[#D8D5CF]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 md:mb-14" data-aos="fade-up" data-aos-duration="550">
                 <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3">Experience</p>
-                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Roles and scope</h2>
-                <p class="text-[#52606D] leading-relaxed">Curated for recruiters and clients. Earlier field research, public-sector assessment work, and program M&amp;E are summarized at the end.</p>
+                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Career arc</h2>
+                <p class="text-[#52606D] leading-relaxed">Highlights only. Full role history is on LinkedIn.</p>
             </div>
 
-            <div class="space-y-8">
-                <article class="card-modern rounded-lg p-8 bg-white" data-aos="fade-up" data-aos-duration="600">
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-duration="550">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-3">
                         <div>
                             <h3 class="text-lg font-semibold text-[#1F2933] font-display">Principal consultant, data &amp; AI strategy</h3>
-                            <p class="text-[#C46A2D] font-semibold">BRUKD Consultancy</p>
-                            <p class="text-sm text-[#52606D]">Founder · Toronto · remote engagements</p>
+                            <p class="text-[#C46A2D] text-sm font-semibold">BRUKD Consultancy</p>
                         </div>
-                        <span class="text-xs font-semibold uppercase tracking-wider text-[#52606D] shrink-0">2017 – present</span>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-[#52606D] shrink-0">2017 to present</p>
                     </div>
                     <ul class="space-y-2 text-sm text-[#52606D] leading-relaxed list-disc list-inside marker:text-[#C46A2D]">
-                        <li>SMB and mid-market advisory: analytics roadmaps, workflow automation, integration, and vendor-agnostic choices tied to maturity and risk.</li>
-                        <li>Executive working sessions on data quality, accountability, and pilots with explicit measures before scale.</li>
-                        <li>Engagements across Canada, Southeast Asia, and East Africa, usually with local partners.</li>
+                        <li>Advisory for SMBs and institutions: roadmaps, automation, integration, and vendor-neutral choices sized to maturity.</li>
+                        <li>Working sessions with executives on pilots, measures, and who owns outcomes before scale.</li>
+                        <li>Canada, Southeast Asia, and East Africa, often with local partners.</li>
                     </ul>
-                </article>
+                </div>
 
-                <article class="card-modern rounded-lg p-8 bg-white" data-aos="fade-up" data-aos-delay="40" data-aos-duration="600">
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="40" data-aos-duration="550">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-3">
                         <div>
-                            <h3 class="text-lg font-semibold text-[#1F2933] font-display">Professor &amp; instructor, business analytics</h3>
-                            <p class="text-[#C46A2D] font-semibold">Ontario colleges</p>
-                            <p class="text-sm text-[#52606D]">George Brown, Seneca, Centennial, Computek</p>
+                            <h3 class="text-lg font-semibold text-[#1F2933] font-display">Professor of business analytics</h3>
+                            <p class="text-[#C46A2D] text-sm font-semibold">George Brown · Seneca · Centennial · Computek</p>
                         </div>
-                        <span class="text-xs font-semibold uppercase tracking-wider text-[#52606D] shrink-0">2021 – present</span>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-[#52606D] shrink-0">2021 to present</p>
                     </div>
                     <ul class="space-y-2 text-sm text-[#52606D] leading-relaxed list-disc list-inside marker:text-[#C46A2D]">
-                        <li>Graduate and postgraduate analytics, BI, marketing analytics, and data management with applied tools (Power BI, SQL, SAS, Tableau, and related stacks).</li>
-                        <li>Project-based coursework and communication standards aligned with industry delivery.</li>
+                        <li>Graduate and postgraduate analytics, BI, marketing analytics, and data management with applied tools.</li>
+                        <li>Project-based courses with communication standards aligned to how teams ship work.</li>
+                        <li>Across the four colleges above: same discipline, different program cultures.</li>
                     </ul>
-                </article>
+                </div>
 
-                <div class="border-t border-[#D8D5CF] pt-10" data-aos="fade-up" data-aos-duration="600">
-                    <h3 class="text-sm font-semibold uppercase tracking-wider text-[#52606D] mb-6">Earlier career (compressed)</h3>
-                    <ul class="space-y-5 border-l border-[#D8D5CF] pl-6">
-                        <li><span class="text-xs font-semibold text-[#C46A2D] block mb-0.5">2007 – 2012</span><span class="font-semibold text-[#1F2933]">Mining Management Unit, Eritrea</span><span class="text-[#52606D] text-sm block mt-1">Social and environmental impact assessments; national guideline development; community and company engagement.</span></li>
-                        <li><span class="text-xs font-semibold text-[#C46A2D] block mb-0.5">2012 – 2016</span><span class="font-semibold text-[#1F2933]">Massawa College</span><span class="text-[#52606D] text-sm block mt-1">Graduate instruction, curriculum design, fisheries cooperative research, UNDP-linked coastal studies.</span></li>
-                        <li><span class="text-xs font-semibold text-[#C46A2D] block mb-0.5">2018 – 2019</span><span class="font-semibold text-[#1F2933]">Khon Kaen University, Thailand</span><span class="text-[#52606D] text-sm block mt-1">Contract instruction and research collaboration.</span></li>
-                        <li><span class="text-xs font-semibold text-[#C46A2D] block mb-0.5">2005 – 2007</span><span class="font-semibold text-[#1F2933]">HAMSET project</span><span class="text-[#52606D] text-sm block mt-1">Cross-sector monitoring, evaluation, and stakeholder reporting.</span></li>
-                    </ul>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="80" data-aos-duration="550">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-[#52606D] mb-2">Earlier (international teaching, research, public sector)</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed">Eritrea: social and environmental impact assessments and guideline work; graduate teaching and fisheries cooperative research at Massawa College. Thailand: contract research and instruction at Khon Kaen University. Cross-sector monitoring and evaluation with the HAMSET program.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Insights -->
-    <section id="insights" class="py-20 md:py-28 bg-white border-t border-[#D8D5CF]">
+    <!-- Featured projects -->
+    <section id="projects" class="section-pad bg-white border-t border-[#D8D5CF]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl mb-12 md:mb-16" data-aos="fade-up" data-aos-duration="600">
-                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3">Insights</p>
-                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Selected writing</h2>
-                <p class="text-[#52606D] leading-relaxed">Short pieces for operators and executives. Full archive on the <a href="https://brukdconsultancy.com/insights.html" class="text-[#C46A2D] font-semibold hover:underline" target="_blank" rel="noopener noreferrer">insights archive</a>; longer technical notes live on <a href="https://danieldemoz.wordpress.com/" class="text-[#C46A2D] font-semibold hover:underline" target="_blank" rel="noopener noreferrer">WordPress</a>.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                <article class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-7 flex flex-col hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-duration="600">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-[#52606D] mb-2">ROI</span>
-                    <h3 class="font-semibold text-[#1F2933] font-display text-lg mb-3 leading-snug">AI Accuracy Is Not ROI</h3>
-                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-4">Why a strong model score is not the same as business return, and what to measure instead.</p>
-                    <a href="https://brukdconsultancy.com/blog/2026/02/25/ai-accuracy-is-not-roi/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] inline-flex items-center gap-1">Read article <i data-feather="external-link" class="w-4 h-4"></i></a>
-                </article>
-                <article class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-7 flex flex-col hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="40" data-aos-duration="600">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-[#52606D] mb-2">Evidence</span>
-                    <h3 class="font-semibold text-[#1F2933] font-display text-lg mb-3 leading-snug">From Evidence-Based Practice to Evidence-Based AI</h3>
-                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-4">Borrowing discipline from healthcare and policy to make AI decisions defensible.</p>
-                    <a href="https://brukdconsultancy.com/blog/2026/03/25/from-evidence-based-practice-to-evidence-based-ai/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] inline-flex items-center gap-1">Read article <i data-feather="external-link" class="w-4 h-4"></i></a>
-                </article>
-                <article class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-7 flex flex-col hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="80" data-aos-duration="600">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-[#52606D] mb-2">Readiness</span>
-                    <h3 class="font-semibold text-[#1F2933] font-display text-lg mb-3 leading-snug">10 Practical Ways to Get Your Business Ready for AI</h3>
-                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-4">Processes, ownership, and measurement before tools accelerate existing chaos.</p>
-                    <a href="https://brukdconsultancy.com/blog/2026/03/04/10-practical-ways-to-get-your-business-ready-for-ai/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] inline-flex items-center gap-1">Read article <i data-feather="external-link" class="w-4 h-4"></i></a>
-                </article>
-                <article class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-7 flex flex-col hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="120" data-aos-duration="600">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-[#52606D] mb-2">Oversight</span>
-                    <h3 class="font-semibold text-[#1F2933] font-display text-lg mb-3 leading-snug">Human-in-the-Loop AI Isn&apos;t Just a Checkbox</h3>
-                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-4">Meaningful review needs authority, timing, and limits, not a policy line after the model has acted.</p>
-                    <a href="https://brukdconsultancy.com/blog/2026/02/10/human-in-the-loop-not-a-checkbox/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] inline-flex items-center gap-1">Read article <i data-feather="external-link" class="w-4 h-4"></i></a>
-                </article>
-                <article class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-7 flex flex-col hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="160" data-aos-duration="600">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-[#52606D] mb-2">Data residency</span>
-                    <h3 class="font-semibold text-[#1F2933] font-display text-lg mb-3 leading-snug">Where Does Your Data Live?</h3>
-                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-4">Why physical location of servers still matters for Canadian organizations as AI adoption grows.</p>
-                    <a href="https://brukdconsultancy.com/blog/2026/04/13/where-does-your-data-live/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] inline-flex items-center gap-1">Read article <i data-feather="external-link" class="w-4 h-4"></i></a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="py-20 md:py-28 bg-[#F5F5F2] border-t border-[#D8D5CF]">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl mb-14" data-aos="fade-up" data-aos-duration="600">
-                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3">Projects</p>
-                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Work samples</h2>
-                <p class="text-[#52606D] leading-relaxed">Featured items are representative of analytics delivery and AI readiness work. Additional repositories and demos are grouped below for depth without competing for attention on first scroll.</p>
+            <div class="max-w-2xl mb-12 md:mb-14" data-aos="fade-up" data-aos-duration="550">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3">Featured projects</p>
+                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Builds with a clear audience</h2>
+                <p class="text-[#52606D] leading-relaxed">A small set of demos that mirror how I teach and advise: explain the decision, then show the data.</p>
             </div>
 
-            <h3 class="text-sm font-semibold uppercase tracking-wider text-[#52606D] mb-6" data-aos="fade-up" data-aos-duration="600">Featured</h3>
-            <div class="grid md:grid-cols-2 gap-6 lg:gap-8 mb-16">
-                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-8 flex flex-col" data-aos="fade-up" data-aos-duration="600">
-                    <span class="text-xs font-semibold text-[#C46A2D] mb-2">Transit intelligence</span>
-                    <h4 class="font-semibold text-[#1F2933] font-display text-xl mb-3">LoopLens</h4>
-                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-6">LoopLens is the interactive transit dashboard built on open data: performance views, rider-facing cuts, and exploratory analysis in Python.</p>
-                    <div class="flex flex-wrap gap-3">
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-[#52606D] mb-6" data-aos="fade-up" data-aos-duration="550">Featured</h3>
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-8 mb-14">
+                <article class="card-modern rounded-lg p-6 md:p-8 bg-[#F5F5F2] flex flex-col" data-aos="fade-up" data-aos-duration="550">
+                    <span class="text-xs font-semibold text-[#C46A2D] mb-2">Transit · public intelligence</span>
+                    <h4 class="font-semibold text-[#1F2933] font-display text-xl mb-2">LoopLens</h4>
+                    <p class="text-sm text-[#52606D] leading-relaxed mb-4 flex-grow">Interactive transit dashboard on open data: operator views, rider-facing cuts, and exploration in Python.</p>
+                    <p class="text-xs text-[#52606D] mb-1"><span class="font-semibold text-[#1F2933]">Tools:</span> Python, pandas, open transit feeds.</p>
+                    <p class="text-xs text-[#52606D] mb-6"><span class="font-semibold text-[#1F2933]">Value:</span> Makes performance legible for non-technical stakeholders.</p>
+                    <div class="flex flex-wrap gap-3 mt-auto">
                         <a href="https://danieldemoz.github.io/interactive-transit-dashboard/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white bg-[#C46A2D] hover:bg-[#A95521] px-4 py-2 rounded-md transition-colors">Live demo</a>
-                        <a href="https://github.com/DanielDemoz/interactive-transit-dashboard" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#1F2933] border border-[#D8D5CF] px-4 py-2 rounded-md hover:border-[#C46A2D] transition-colors">GitHub</a>
+                        <a href="https://github.com/DanielDemoz/interactive-transit-dashboard" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#1F2933] border border-[#D8D5CF] bg-white px-4 py-2 rounded-md hover:border-[#C46A2D] transition-colors">GitHub</a>
                     </div>
-                </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-8 flex flex-col" data-aos="fade-up" data-aos-delay="40" data-aos-duration="600">
-                    <span class="text-xs font-semibold text-[#C46A2D] mb-2">Operations ML</span>
-                    <h4 class="font-semibold text-[#1F2933] font-display text-xl mb-3">TTC Predict</h4>
-                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-6">Delay prediction with a small API surface, fed by Toronto open data for a realistic deployment shape.</p>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="https://danieldemoz.github.io/ttc-predict/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white bg-[#C46A2D] hover:bg-[#A95521] px-4 py-2 rounded-md transition-colors">Live demo</a>
-                        <a href="https://github.com/DanielDemoz/ttc-predict" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#1F2933] border border-[#D8D5CF] px-4 py-2 rounded-md hover:border-[#C46A2D] transition-colors">GitHub</a>
-                    </div>
-                </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-8 flex flex-col" data-aos="fade-up" data-aos-delay="80" data-aos-duration="600">
-                    <span class="text-xs font-semibold text-[#C46A2D] mb-2">Retention analytics</span>
-                    <h4 class="font-semibold text-[#1F2933] font-display text-xl mb-3">Customer churn analysis</h4>
-                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-6">Modeling and Streamlit views aimed at stakeholders who need to act on risk segments, not only review accuracy tables.</p>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="https://ecommerce-churn-analysis-hmpsaq7em9psjb8ivlzfzy.streamlit.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white bg-[#C46A2D] hover:bg-[#A95521] px-4 py-2 rounded-md transition-colors">Live demo</a>
-                        <a href="https://github.com/DanielDemoz/ecommerce-churn-analysis" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#1F2933] border border-[#D8D5CF] px-4 py-2 rounded-md hover:border-[#C46A2D] transition-colors">GitHub</a>
-                    </div>
-                </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-8 flex flex-col" data-aos="fade-up" data-aos-delay="120" data-aos-duration="600">
-                    <span class="text-xs font-semibold text-[#C46A2D] mb-2">Funding readiness</span>
-                    <h4 class="font-semibold text-[#1F2933] font-display text-xl mb-3">Evidence AI funding audit</h4>
-                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-6">Structured framing for AI investment and grants: evidence, governance hooks, and narrative alignment.</p>
-                    <div class="flex flex-wrap gap-3">
+                </article>
+                <article class="card-modern rounded-lg p-6 md:p-8 bg-[#F5F5F2] flex flex-col" data-aos="fade-up" data-aos-delay="40" data-aos-duration="550">
+                    <span class="text-xs font-semibold text-[#C46A2D] mb-2">Public funding risk lens</span>
+                    <h4 class="font-semibold text-[#1F2933] font-display text-xl mb-2">Evidence-based AI funding audit</h4>
+                    <p class="text-sm text-[#52606D] leading-relaxed mb-4 flex-grow">Narrative and checklist framing for grants and AI investment: evidence hooks, accountability, and what funders actually read.</p>
+                    <p class="text-xs text-[#52606D] mb-1"><span class="font-semibold text-[#1F2933]">Tools:</span> Static site + structured prompts for reviewers.</p>
+                    <p class="text-xs text-[#52606D] mb-6"><span class="font-semibold text-[#1F2933]">Value:</span> Aligns technical work with sponsor language.</p>
+                    <div class="flex flex-wrap gap-3 mt-auto">
                         <a href="https://danieldemoz.github.io/evidence-ai-funding-audit/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white bg-[#C46A2D] hover:bg-[#A95521] px-4 py-2 rounded-md transition-colors">Live demo</a>
-                        <a href="https://github.com/DanielDemoz/evidence-ai-funding-audit" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#1F2933] border border-[#D8D5CF] px-4 py-2 rounded-md hover:border-[#C46A2D] transition-colors">GitHub</a>
+                        <a href="https://github.com/DanielDemoz/evidence-ai-funding-audit" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#1F2933] border border-[#D8D5CF] bg-white px-4 py-2 rounded-md hover:border-[#C46A2D] transition-colors">GitHub</a>
                     </div>
-                </div>
+                </article>
+                <article class="card-modern rounded-lg p-6 md:p-8 bg-[#F5F5F2] flex flex-col" data-aos="fade-up" data-aos-delay="80" data-aos-duration="550">
+                    <span class="text-xs font-semibold text-[#C46A2D] mb-2">Operations ML</span>
+                    <h4 class="font-semibold text-[#1F2933] font-display text-xl mb-2">TTC Predict</h4>
+                    <p class="text-sm text-[#52606D] leading-relaxed mb-4 flex-grow">Delay prediction behind a small API, using Toronto open data shaped like a real deployment, not a notebook-only exercise.</p>
+                    <p class="text-xs text-[#52606D] mb-1"><span class="font-semibold text-[#1F2933]">Tools:</span> Python, FastAPI-style surface, open data.</p>
+                    <p class="text-xs text-[#52606D] mb-6"><span class="font-semibold text-[#1F2933]">Value:</span> Shows how ML meets operations constraints.</p>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <a href="https://danieldemoz.github.io/ttc-predict/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white bg-[#C46A2D] hover:bg-[#A95521] px-4 py-2 rounded-md transition-colors">Live demo</a>
+                        <a href="https://github.com/DanielDemoz/ttc-predict" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#1F2933] border border-[#D8D5CF] bg-white px-4 py-2 rounded-md hover:border-[#C46A2D] transition-colors">GitHub</a>
+                    </div>
+                </article>
+                <article class="card-modern rounded-lg p-6 md:p-8 bg-[#F5F5F2] flex flex-col" data-aos="fade-up" data-aos-delay="120" data-aos-duration="550">
+                    <span class="text-xs font-semibold text-[#C46A2D] mb-2">Retention</span>
+                    <h4 class="font-semibold text-[#1F2933] font-display text-xl mb-2">Customer churn analysis</h4>
+                    <p class="text-sm text-[#52606D] leading-relaxed mb-4 flex-grow">Streamlit views for risk segments so marketing and service leads can act, not just read accuracy tables.</p>
+                    <p class="text-xs text-[#52606D] mb-1"><span class="font-semibold text-[#1F2933]">Tools:</span> Python, scikit-learn, Streamlit.</p>
+                    <p class="text-xs text-[#52606D] mb-6"><span class="font-semibold text-[#1F2933]">Value:</span> Connects model output to retention plays.</p>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <a href="https://ecommerce-churn-analysis-hmpsaq7em9psjb8ivlzfzy.streamlit.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white bg-[#C46A2D] hover:bg-[#A95521] px-4 py-2 rounded-md transition-colors">Live demo</a>
+                        <a href="https://github.com/DanielDemoz/ecommerce-churn-analysis" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#1F2933] border border-[#D8D5CF] bg-white px-4 py-2 rounded-md hover:border-[#C46A2D] transition-colors">GitHub</a>
+                    </div>
+                </article>
             </div>
 
-            <div class="rounded-lg border border-[#D8D5CF] bg-[#ECEAE4]/50 p-6 md:p-8" data-aos="fade-up" data-aos-duration="600">
-                <h3 class="text-sm font-semibold uppercase tracking-wider text-[#52606D] mb-4">Additional experiments &amp; teaching demos</h3>
-                <p class="text-sm text-[#52606D] mb-6 leading-relaxed">Smaller builds, course-adjacent demos, and exploratory work. All open on GitHub.</p>
+            <div class="rounded-lg border border-[#D8D5CF] bg-[#ECEAE4]/60 p-6 md:p-8" data-aos="fade-up" data-aos-duration="550">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-[#52606D] mb-3">More experiments</h3>
+                <p class="text-sm text-[#52606D] mb-5 leading-relaxed">Teaching demos and smaller builds live on the same GitHub account.</p>
                 <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-[#1F2933]">
-                    <li><a href="https://github.com/DanielDemoz/TTC-Line1-Optimization" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">TTC Line 1 optimization study</a></li>
+                    <li><a href="https://github.com/DanielDemoz/TTC-Line1-Optimization" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">TTC Line 1 optimization</a></li>
                     <li><a href="https://github.com/DanielDemoz/toronto-transit-sentiment-nlp" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">Transit sentiment (NLP)</a></li>
                     <li><a href="https://github.com/DanielDemoz/fieldops-ai" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">FieldOps AI</a></li>
-                    <li><a href="https://github.com/DanielDemoz/ai-booking-optimization" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">AI booking optimization</a></li>
                     <li><a href="https://github.com/DanielDemoz/sql-portfolio" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">SQL portfolio</a></li>
-                    <li><a href="https://github.com/DanielDemoz/customer-segmentation-clv" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">Customer segmentation &amp; CLV</a></li>
+                    <li><a href="https://github.com/DanielDemoz/customer-segmentation-clv" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">Segmentation &amp; CLV</a></li>
                     <li><a href="https://github.com/DanielDemoz/Diabetes-Risk-Prediction-Using-BRFSS-US-and-CCHS-Canada" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">Diabetes risk (BRFSS / CCHS)</a></li>
-                    <li><a href="https://github.com/DanielDemoz/ai-ethics-case-study" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">AI ethics case study</a></li>
-                    <li><a href="https://github.com/DanielDemoz/career-college-rpa-demo" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">Career college RPA demo</a></li>
-                    <li><a href="https://github.com/DanielDemoz/ai-restaurant-menu" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">AI restaurant menu</a></li>
-                    <li><a href="https://github.com/DanielDemoz/brukd-ai-customer-engagement" class="text-[#C46A2D] font-medium hover:underline" target="_blank" rel="noopener noreferrer">Customer engagement AI prototype</a></li>
                 </ul>
-                <p class="mt-8 text-center"><a href="https://github.com/DanielDemoz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-[#1F2933] border border-[#D8D5CF] bg-white px-5 py-2.5 rounded-md hover:border-[#C46A2D] transition-colors"><i data-feather="github" class="w-4 h-4"></i> View all repositories</a></p>
+                <p class="mt-6 text-center"><a href="https://github.com/DanielDemoz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-[#1F2933] border border-[#D8D5CF] bg-white px-5 py-2.5 rounded-md hover:border-[#C46A2D] transition-colors"><i data-feather="github" class="w-4 h-4" aria-hidden="true"></i> All repositories</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Writing & insights -->
+    <section id="insights" class="section-pad bg-[#F5F5F2] border-t border-[#D8D5CF]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mb-12 md:mb-14" data-aos="fade-up" data-aos-duration="550">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3">Writing &amp; insights</p>
+                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Selected articles</h2>
+                <p class="text-[#52606D] leading-relaxed">Shorter pieces for leaders. <a href="https://brukdconsultancy.com/insights.html" class="text-[#C46A2D] font-semibold hover:underline" target="_blank" rel="noopener noreferrer">Full archive</a> · <a href="https://danieldemoz.wordpress.com/" class="text-[#C46A2D] font-semibold hover:underline" target="_blank" rel="noopener noreferrer">WordPress</a>.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="card-modern rounded-lg p-6 bg-white flex flex-col h-full" data-aos="fade-up" data-aos-duration="550">
+                    <time class="text-xs text-[#52606D] mb-2" datetime="2026-02-25">Feb 2026</time>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider text-[#C46A2D] mb-2">ROI</span>
+                    <h3 class="font-semibold text-[#1F2933] font-display text-base mb-2 leading-snug">AI Accuracy Is Not ROI</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-4">Model scores and business return are different conversations.</p>
+                    <a href="https://brukdconsultancy.com/blog/2026/02/25/ai-accuracy-is-not-roi/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] inline-flex items-center gap-1 mt-auto">Read <i data-feather="external-link" class="w-4 h-4" aria-hidden="true"></i></a>
+                </article>
+                <article class="card-modern rounded-lg p-6 bg-white flex flex-col h-full" data-aos="fade-up" data-aos-delay="40" data-aos-duration="550">
+                    <time class="text-xs text-[#52606D] mb-2" datetime="2026-03-25">Mar 2026</time>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider text-[#C46A2D] mb-2">Evidence</span>
+                    <h3 class="font-semibold text-[#1F2933] font-display text-base mb-2 leading-snug">From Evidence-Based Practice to Evidence-Based AI</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-4">Borrowing discipline from policy and healthcare for defensible AI choices.</p>
+                    <a href="https://brukdconsultancy.com/blog/2026/03/25/from-evidence-based-practice-to-evidence-based-ai/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] inline-flex items-center gap-1 mt-auto">Read <i data-feather="external-link" class="w-4 h-4" aria-hidden="true"></i></a>
+                </article>
+                <article class="card-modern rounded-lg p-6 bg-white flex flex-col h-full" data-aos="fade-up" data-aos-delay="80" data-aos-duration="550">
+                    <time class="text-xs text-[#52606D] mb-2" datetime="2026">2026</time>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider text-[#C46A2D] mb-2">Decisions</span>
+                    <h3 class="font-semibold text-[#1F2933] font-display text-base mb-2 leading-snug">When Should AI Decide? When Should Humans?</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-4">A concise frame for delegation, review timing, and accountability.</p>
+                    <a href="https://brukdconsultancy.com/insights.html" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] inline-flex items-center gap-1 mt-auto">Browse insights <i data-feather="external-link" class="w-4 h-4" aria-hidden="true"></i></a>
+                </article>
+                <article class="card-modern rounded-lg p-6 bg-white flex flex-col h-full" data-aos="fade-up" data-aos-delay="120" data-aos-duration="550">
+                    <time class="text-xs text-[#52606D] mb-2" datetime="2026-02-10">Feb 2026</time>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider text-[#C46A2D] mb-2">Oversight</span>
+                    <h3 class="font-semibold text-[#1F2933] font-display text-base mb-2 leading-snug">Human-in-the-Loop AI Isn&apos;t Just a Checkbox</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-4">Review needs authority and limits, not a line in a policy after the fact.</p>
+                    <a href="https://brukdconsultancy.com/blog/2026/02/10/human-in-the-loop-not-a-checkbox/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] inline-flex items-center gap-1 mt-auto">Read <i data-feather="external-link" class="w-4 h-4" aria-hidden="true"></i></a>
+                </article>
+                <article class="card-modern rounded-lg p-6 bg-white flex flex-col h-full" data-aos="fade-up" data-aos-delay="160" data-aos-duration="550">
+                    <time class="text-xs text-[#52606D] mb-2" datetime="2026-04-13">Apr 2026</time>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider text-[#C46A2D] mb-2">Data</span>
+                    <h3 class="font-semibold text-[#1F2933] font-display text-base mb-2 leading-snug">Where Does Your Data Live?</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-4">Why server location still matters for Canadian teams adopting AI.</p>
+                    <a href="https://brukdconsultancy.com/blog/2026/04/13/where-does-your-data-live/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] inline-flex items-center gap-1 mt-auto">Read <i data-feather="external-link" class="w-4 h-4" aria-hidden="true"></i></a>
+                </article>
+                <article class="card-modern rounded-lg p-6 bg-white flex flex-col h-full" data-aos="fade-up" data-aos-delay="200" data-aos-duration="550">
+                    <time class="text-xs text-[#52606D] mb-2" datetime="2026-03-04">Mar 2026</time>
+                    <span class="text-[10px] font-semibold uppercase tracking-wider text-[#C46A2D] mb-2">Readiness</span>
+                    <h3 class="font-semibold text-[#1F2933] font-display text-base mb-2 leading-snug">10 Practical Ways to Get Your Business Ready for AI</h3>
+                    <p class="text-sm text-[#52606D] leading-relaxed flex-grow mb-4">Processes and ownership before tools speed up the wrong work.</p>
+                    <a href="https://brukdconsultancy.com/blog/2026/03/04/10-practical-ways-to-get-your-business-ready-for-ai/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] inline-flex items-center gap-1 mt-auto">Read <i data-feather="external-link" class="w-4 h-4" aria-hidden="true"></i></a>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Education -->
-    <section id="education" class="py-20 md:py-24 bg-white border-t border-[#D8D5CF]">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12" data-aos="fade-up" data-aos-duration="600">
+    <section id="education" class="section-pad bg-[#ECEAE4] border-t border-[#D8D5CF]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 md:mb-12" data-aos="fade-up" data-aos-duration="550">
                 <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3">Education</p>
-                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Formal preparation</h2>
-                <p class="text-[#52606D] leading-relaxed">Interdisciplinary AI at Ottawa anchors current study; earlier degrees and certificates support teaching and applied consulting.</p>
+                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Degrees &amp; recognition</h2>
+                <p class="text-[#52606D] leading-relaxed">Ottawa anchors current graduate work; earlier credentials underpin teaching and consulting.</p>
             </div>
-            <div class="space-y-6">
-                <div class="rounded-lg border border-[#D8D5CF] bg-[#F5F5F2] p-6 md:p-8" data-aos="fade-up" data-aos-duration="600">
+            <div class="space-y-5">
+                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-7" data-aos="fade-up" data-aos-duration="550">
                     <h3 class="font-semibold text-[#1F2933] font-display text-lg mb-1">University of Ottawa</h3>
-                    <p class="text-[#C46A2D] text-sm font-medium mb-3">Master of Interdisciplinary Artificial Intelligence (in progress, final term)</p>
-                    <p class="text-sm text-[#52606D] leading-relaxed">Coursework and research emphasis on cloud data engineering, evidence-based use of models, and the policy and organizational context around deployment.</p>
+                    <p class="text-[#C46A2D] text-sm font-medium mb-2">M.I.A.I.: Interdisciplinary Artificial Intelligence (in progress, final term)</p>
+                    <p class="text-sm text-[#52606D] leading-relaxed">Cloud data engineering, deployment context, and how organizations adopt models responsibly.</p>
                 </div>
-                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-8" data-aos="fade-up" data-aos-duration="600">
-                    <h3 class="font-semibold text-[#1F2933] font-display text-lg mb-3">Earlier credentials (selected)</h3>
+                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-7" data-aos="fade-up" data-aos-delay="40" data-aos-duration="550">
+                    <h3 class="font-semibold text-[#1F2933] font-display text-lg mb-3">Earlier credentials</h3>
                     <ul class="text-sm text-[#52606D] space-y-2 list-disc list-inside marker:text-[#C46A2D]">
-                        <li>Centennial College: Teaching and Learning in Higher Education (TLHE); Postgraduate Certificate, Marketing Research and Analytics.</li>
-                        <li>Khon Kaen University: M.A., Research and Development Management.</li>
+                        <li>Centennial College: TLHE; postgraduate marketing research &amp; analytics.</li>
+                        <li>Khon Kaen University: M.A., Research &amp; Development Management.</li>
                         <li>University of Asmara: B.A., Sociology.</li>
                     </ul>
-                    <p class="text-xs text-[#52606D] mt-4 leading-relaxed">Additional professional certificates (data science foundations, requirements analysis, QuickBooks, collaboration) are available on request; kept off this page to reduce noise.</p>
+                    <p class="text-xs text-[#52606D] mt-3">Other certificates available on request.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Honors & Publications -->
-    <section class="py-20 md:py-24 bg-[#ECEAE4] border-t border-[#D8D5CF]">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-16">
-                <div data-aos="fade-up" data-aos-duration="600">
-                    <div class="flex items-center mb-8">
-                        <div class="bg-white border border-[#D8D5CF] p-3 rounded-full mr-4">
-                            <i data-feather="star" class="text-[#C46A2D]"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-[#1F2933] font-display">Honors &amp; awards</h3>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="bg-white border border-[#D8D5CF] p-6 rounded-lg">
-                            <h4 class="font-medium text-[#1F2933] mb-2">First class with Great Honours</h4>
-                            <p class="text-sm text-[#52606D]">First master&rsquo;s degree</p>
-                        </div>
-                        <div class="bg-white border border-[#D8D5CF] p-6 rounded-lg">
-                            <h4 class="font-medium text-[#1F2933] mb-2">Honours recognition</h4>
-                            <p class="text-sm text-[#52606D]">Postgraduate marketing research program</p>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="40" data-aos-duration="600">
-                    <div class="flex items-center mb-8">
-                        <div class="bg-white border border-[#D8D5CF] p-3 rounded-full mr-4">
-                            <i data-feather="file-text" class="text-[#C46A2D]"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-[#1F2933] font-display">Publications</h3>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="bg-white p-6 rounded-lg border-l-2 border-[#C46A2D]">
-                            <p class="text-xs font-semibold uppercase tracking-wide text-[#52606D] mb-2">Book</p>
-                            <p class="text-[#52606D] text-sm font-medium mb-1">Demoz, Daniel S.</p>
-                            <h4 class="font-semibold text-[#1F2933] mb-2 leading-snug">Evidence-Based AI: Making Reliable AI Decisions</h4>
-                            <p class="text-sm text-[#52606D] mb-4">Amazon Kindle Direct Publishing.</p>
-                            <a href="https://www.amazon.com/s?i=digital-text&k=Evidence-Based+AI+Making+Reliable+AI+Decisions+Daniel+Demoz" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-[#C46A2D] hover:underline inline-flex items-center gap-1">
-                                View on Amazon
-                                <i data-feather="external-link" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                        <div class="bg-white border border-[#D8D5CF] p-6 rounded-lg">
-                            <h4 class="font-medium text-[#1F2933] mb-2 text-sm leading-snug">Factors affecting attitudes toward fisheries cooperatives</h4>
-                            <p class="text-xs text-[#52606D]">Dahlak Islands, Eritrea</p>
-                        </div>
-                        <div class="bg-white border border-[#D8D5CF] p-6 rounded-lg">
-                            <h4 class="font-medium text-[#1F2933] mb-2 text-sm leading-snug">Member attitudes toward cooperative performance</h4>
-                            <p class="text-xs text-[#52606D]">Dahlak Sub-Zone, Eritrea</p>
-                        </div>
-                    </div>
+                <div class="rounded-lg border border-[#D8D5CF] bg-white p-6 md:p-7" data-aos="fade-up" data-aos-delay="80" data-aos-duration="550">
+                    <h3 class="font-semibold text-[#1F2933] font-display text-lg mb-3">Book &amp; research</h3>
+                    <p class="text-sm text-[#52606D] mb-3">Honours: first-class with great distinction (first master&rsquo;s); honours recognition in postgraduate marketing research.</p>
+                    <p class="text-sm text-[#52606D] mb-3"><span class="font-semibold text-[#1F2933]">Book:</span> <em>Evidence-Based AI: Making Reliable AI Decisions</em> (Kindle). <a href="https://www.amazon.com/s?i=digital-text&k=Evidence-Based+AI+Making+Reliable+AI+Decisions+Daniel+Demoz" class="text-[#C46A2D] font-semibold hover:underline" target="_blank" rel="noopener noreferrer">View on Amazon</a>.</p>
+                    <p class="text-sm text-[#52606D]">Earlier fisheries cooperative studies (Dahlak Islands / Sub-Zone, Eritrea).</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-20 md:py-28 bg-white border-t border-[#D8D5CF]">
+    <section id="contact" class="section-pad bg-white border-t border-[#D8D5CF]">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12 md:mb-16 text-center md:text-left" data-aos="fade-up" data-aos-duration="600">
+            <div class="mb-10 md:mb-12 text-center md:text-left" data-aos="fade-up" data-aos-duration="550">
                 <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#52606D] mb-3">Contact</p>
-                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">A direct line</h2>
-                <p class="text-[#52606D] leading-relaxed max-w-xl mx-auto md:mx-0">For teaching conversations, advisory scoping, or leadership roles in analytics and AI, send a short note with context and timing. I read everything; replies may take a few business days.</p>
+                <h2 class="text-2xl md:text-3xl font-semibold text-[#1F2933] font-display mb-4">Get in touch</h2>
+                <p class="text-[#52606D] leading-relaxed max-w-xl mx-auto md:mx-0">Teaching inquiries, advisory scoping, or leadership roles: send a short note with timing. Replies within a few business days.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-12 md:gap-16">
                 <div class="space-y-8 text-[#52606D] text-sm" data-aos="fade-up" data-aos-duration="600">
@@ -728,18 +729,18 @@
                     </div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="40" data-aos-duration="600">
-                    <form class="space-y-5">
+                    <form class="space-y-5" id="contact-form" aria-label="Contact form">
                         <div>
                             <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-[#52606D] mb-1">Name *</label>
-                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-md border border-[#D8D5CF] bg-[#F5F5F2] text-[#1F2933] focus:outline-none focus:ring-2 focus:ring-[#C46A2D]/40 focus:border-[#C46A2D]" placeholder="Your name">
+                            <input type="text" id="name" name="name" required autocomplete="name" class="w-full px-4 py-3 rounded-md border border-[#D8D5CF] bg-[#F5F5F2] text-[#1F2933] focus:outline-none focus:ring-2 focus:ring-[#C46A2D]/40 focus:border-[#C46A2D]" placeholder="Your name">
                         </div>
                         <div>
                             <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-[#52606D] mb-1">Email *</label>
-                            <input type="email" id="email" required class="w-full px-4 py-3 rounded-md border border-[#D8D5CF] bg-[#F5F5F2] text-[#1F2933] focus:outline-none focus:ring-2 focus:ring-[#C46A2D]/40 focus:border-[#C46A2D]" placeholder="you@organization.com">
+                            <input type="email" id="email" name="email" required autocomplete="email" class="w-full px-4 py-3 rounded-md border border-[#D8D5CF] bg-[#F5F5F2] text-[#1F2933] focus:outline-none focus:ring-2 focus:ring-[#C46A2D]/40 focus:border-[#C46A2D]" placeholder="you@organization.com">
                         </div>
                         <div>
                             <label for="inquiry-type" class="block text-xs font-semibold uppercase tracking-wider text-[#52606D] mb-1">Topic *</label>
-                            <select id="inquiry-type" required class="w-full px-4 py-3 rounded-md border border-[#D8D5CF] bg-[#F5F5F2] text-[#1F2933] focus:outline-none focus:ring-2 focus:ring-[#C46A2D]/40 focus:border-[#C46A2D]">
+                            <select id="inquiry-type" name="inquiry-type" required class="w-full px-4 py-3 rounded-md border border-[#D8D5CF] bg-[#F5F5F2] text-[#1F2933] focus:outline-none focus:ring-2 focus:ring-[#C46A2D]/40 focus:border-[#C46A2D]">
                                 <option value="">Select</option>
                                 <option value="consulting">Advisory / consulting</option>
                                 <option value="teaching">Teaching / speaking</option>
@@ -750,62 +751,64 @@
                         </div>
                         <div>
                             <label for="company" class="block text-xs font-semibold uppercase tracking-wider text-[#52606D] mb-1">Organization</label>
-                            <input type="text" id="company" class="w-full px-4 py-3 rounded-md border border-[#D8D5CF] bg-[#F5F5F2] text-[#1F2933] focus:outline-none focus:ring-2 focus:ring-[#C46A2D]/40 focus:border-[#C46A2D]" placeholder="Optional">
+                            <input type="text" id="company" name="company" autocomplete="organization" class="w-full px-4 py-3 rounded-md border border-[#D8D5CF] bg-[#F5F5F2] text-[#1F2933] focus:outline-none focus:ring-2 focus:ring-[#C46A2D]/40 focus:border-[#C46A2D]" placeholder="Optional">
                         </div>
                         <div>
                             <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-[#52606D] mb-1">Message *</label>
-                            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-md border border-[#D8D5CF] bg-[#F5F5F2] text-[#1F2933] focus:outline-none focus:ring-2 focus:ring-[#C46A2D]/40 focus:border-[#C46A2D]" placeholder="A few sentences on context and what you need."></textarea>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-md border border-[#D8D5CF] bg-[#F5F5F2] text-[#1F2933] focus:outline-none focus:ring-2 focus:ring-[#C46A2D]/40 focus:border-[#C46A2D]" placeholder="A few sentences on context and what you need."></textarea>
                         </div>
-                        <button type="submit" class="btn-primary text-white w-full py-3 rounded-md font-semibold text-sm">Send</button>
+                        <button type="submit" class="btn-primary text-white w-full py-3 rounded-md font-semibold text-sm">Send message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
-    <footer class="bg-[#1F2933] text-white py-16">
+    <footer class="bg-[#1F2933] text-white py-14 md:py-16" role="contentinfo">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <!-- About -->
                 <div class="md:col-span-2">
-                    <h3 class="text-xl font-bold mb-4">Daniel S. Demoz</h3>
-                    <p class="text-white/60 mb-4 leading-relaxed">Professor of business analytics and independent advisor in Toronto. Teaching, client work, and writing on evidence-based use of data and models. Practice: <a href="https://brukdconsultancy.com/" class="text-[#C46A2D] hover:text-white" target="_blank" rel="noopener noreferrer">BRUKD Consultancy</a>.</p>
+                    <p class="text-xl font-bold mb-4">Daniel S. Demoz</p>
+                    <p class="text-white/60 mb-4 leading-relaxed">Professor of business analytics and AI &amp; data strategy advisor, Toronto. Practice: <a href="https://brukdconsultancy.com/" class="text-[#C46A2D] hover:text-white" target="_blank" rel="noopener noreferrer">BRUKD Consultancy</a>.</p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="mailto:asdansi9@gmail.com" class="text-white/60 hover:text-[#C46A2D] transition">
-                            <i data-feather="mail" class="w-5 h-5"></i>
+                        <a href="mailto:asdansi9@gmail.com" class="text-white/60 hover:text-[#C46A2D] transition" aria-label="Email Daniel Demoz">
+                            <i data-feather="mail" class="w-5 h-5" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/daniel-s-demoz" target="_blank" class="text-white/60 hover:text-[#C46A2D] transition">
-                            <i data-feather="linkedin" class="w-5 h-5"></i>
+                        <a href="https://www.linkedin.com/in/daniel-s-demoz" target="_blank" class="text-white/60 hover:text-[#C46A2D] transition" aria-label="Daniel Demoz on LinkedIn">
+                            <i data-feather="linkedin" class="w-5 h-5" aria-hidden="true"></i>
                         </a>
-                        <a href="https://github.com/DanielDemoz" target="_blank" class="text-white/60 hover:text-[#C46A2D] transition">
-                            <i data-feather="github" class="w-5 h-5"></i>
+                        <a href="https://github.com/DanielDemoz" target="_blank" class="text-white/60 hover:text-[#C46A2D] transition" aria-label="Daniel Demoz on GitHub">
+                            <i data-feather="github" class="w-5 h-5" aria-hidden="true"></i>
                         </a>
-                        <a href="https://brukdconsultancy.com/insights.html" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-[#C46A2D] transition" title="Insights archive">
-                            <i data-feather="file-text" class="w-5 h-5"></i>
+                        <a href="https://brukdconsultancy.com/insights.html" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-[#C46A2D] transition" aria-label="BRUKD insights archive">
+                            <i data-feather="file-text" class="w-5 h-5" aria-hidden="true"></i>
                         </a>
-                        <a href="https://danieldemoz.wordpress.com/" target="_blank" class="text-white/60 hover:text-[#C46A2D] transition" title="WordPress">
-                            <i data-feather="book-open" class="w-5 h-5"></i>
+                        <a href="https://danieldemoz.wordpress.com/" target="_blank" class="text-white/60 hover:text-[#C46A2D] transition" aria-label="Daniel Demoz WordPress blog">
+                            <i data-feather="book-open" class="w-5 h-5" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">On this page</h4>
+                    <p class="text-lg font-semibold mb-4 text-white">On this page</p>
                     <ul class="space-y-2">
-                        <li><a href="#about" class="text-white/60 hover:text-[#C46A2D] transition">Bio</a></li>
+                        <li><a href="#about" class="text-white/60 hover:text-[#C46A2D] transition">About</a></li>
+                        <li><a href="#areas" class="text-white/60 hover:text-[#C46A2D] transition">Areas</a></li>
                         <li><a href="#impact" class="text-white/60 hover:text-[#C46A2D] transition">Impact</a></li>
-                        <li><a href="#focus" class="text-white/60 hover:text-[#C46A2D] transition">Focus</a></li>
                         <li><a href="#experience" class="text-white/60 hover:text-[#C46A2D] transition">Experience</a></li>
-                        <li><a href="#insights" class="text-white/60 hover:text-[#C46A2D] transition">Insights</a></li>
                         <li><a href="#projects" class="text-white/60 hover:text-[#C46A2D] transition">Projects</a></li>
+                        <li><a href="#insights" class="text-white/60 hover:text-[#C46A2D] transition">Writing</a></li>
                         <li><a href="#education" class="text-white/60 hover:text-[#C46A2D] transition">Education</a></li>
                         <li><a href="#contact" class="text-white/60 hover:text-[#C46A2D] transition">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Engagement types</h4>
+                    <p class="text-lg font-semibold mb-4 text-white">Engagement</p>
                     <ul class="space-y-2 text-white/60 text-sm">
                         <li>Advisory and readiness</li>
                         <li>Analytics leadership</li>
@@ -835,7 +838,10 @@
         
         // Mobile menu toggle
         document.getElementById('menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            const expanded = !menu.classList.contains('hidden');
+            this.setAttribute('aria-expanded', expanded ? 'true' : 'false');
         });
         
         

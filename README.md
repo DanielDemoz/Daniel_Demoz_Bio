@@ -1,18 +1,18 @@
-# Daniel S. Demoz — professional site (`Daniel_Demoz_Bio`)
+# Daniel S. Demoz: professional site (`Daniel_Demoz_Bio`)
 
 Executive-style portfolio: practical AI and analytics leadership, teaching, and independent advisory ([BRUKD Consultancy](https://brukdconsultancy.com/)). Static HTML with Tailwind (CDN), Feather icons, and light AOS motion.
 
 ## What’s on the site
 
-- **Hero & credibility** — positioning, portrait, and a compact trust strip (colleges, practice, cloud context, regions).
-- **Bio** — how classroom, client, and consulting work fit together; readiness, ownership, and evidence without hype.
-- **Impact** — curated outcome cards with context (not floating metrics alone).
-- **Focus** — six service-style areas (readiness, analytics strategy, KPI architecture, grounded adoption, executive education, SMB advisory).
-- **Experience** — expanded BRUKD and Ontario colleges roles; earlier career compressed.
-- **Insights** — five featured articles (links to the consultancy blog).
-- **Projects** — four featured builds plus a secondary list of experiments and demos.
-- **Education** — Ottawa MIA emphasis; earlier credentials summarized.
-- **Contact** — minimal layout and inquiry form.
+- **Hero & credibility:** positioning, portrait, and a compact trust strip (colleges, practice, cloud context, regions).
+- **About:** who Daniel is, how analytics and AI connect to decisions, who he works with.
+- **Areas of work:** five capability clusters (strategy, governance/KPIs, BI, ML, teaching) with tools mentioned lightly.
+- **Selected impact:** three outcome cards with context, not bare metrics.
+- **Experience:** timeline (BRUKD, Ontario colleges, earlier international work).
+- **Featured projects:** four builds plus a compact “more experiments” list.
+- **Writing & insights:** selected articles with links to BRUKD and WordPress.
+- **Education:** degrees, credentials, book/research note.
+- **Contact:** short intro and inquiry form.
 
 ## Stack
 
